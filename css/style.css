@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+  }
+  header {
+    padding: 15px; 
+    font-family:sans-serif;
+
+  }
+  header ul {
+    float: right;
+  }
+  header li {
+    display: inline-block;
+    padding: 0px 5px;
+    margin-right: 20px;
+  }
+  header p {
+    display: inline-block;
+  }
+  .content img {
+    height: 300px;
+    padding: 25px 15px; 
+}
+  .content {
+    padding: 80px;
+    width: 600px;
+    margin:0 auto;
+    text-align: center;
+    font-family: sans-serif;
+    line-height: 150%;
+}
+
+
+/*  My UX Skills section coded using CSS flex */
+
+.mySkills {
+  padding: 80px;
+  text-align: center;
+  font-family: sans-serif;
+  line-height: 150%;
+}
+.flexContainer {
+  display: flex;
+}
+.flex_item {
+  margin:40px;
+  padding:10px;
+}
+
+/*  My Work section coded using CSS grid */
+
+.myWork {
+  padding: 80px;
+  text-align: center;
+  font-family: sans-serif;
+  line-height: 150%;
+}
+.workGrid {
+  display: grid;
+  margin:40px;
+  grid-template-columns: 50px, 100px; 
+  grid-template-rows: repeat(150px, 10px); 
+  grid-column-gap: 20px;
+  grid-row-gap: 20px; 
+  text-align:left
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 2; } 
+.div2 { grid-area: 1 / 2 / 2 / 3; } 
+.div3 { grid-area: 2 / 1 / 3 / 2; } 
+.div4 { grid-area: 2 / 2 / 3 / 3; } 
+.div5 { grid-area: 3 / 1 / 4 / 2; } 
+.div6 { grid-area: 3 / 2 / 4 / 3; } 
+
+footer ul {
+    float: left;
+    font-family: sans-serif;
+}
+footer li {
+    display: inline-block;
+    padding: 0px 5px;
+    margin-right: 20px;
+  }
+
+  @media only screen and (max-width:600) {
+    .flexContainer {
+      flex-direction: column;
+    }
+    .flex_item {
+      width: 100%;
+    }
+   .workGrid {
+    grid-template-rows: 300px 300px 300px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "div1"
+    "div2"
+    "div3"
+    "div4"
+    "div5"
+    "div6";
+    }
+}
